@@ -26,9 +26,15 @@
   background-color: var(--cor-realce-amarelo);
   transform: translateY(-2px);
 }
+body.dark-theme .btn-primary:hover {
+  background-color: var(--cor-realce-amarelo);
+}
 .btn-secondary:hover {
   background-color: #7ab8a5;
   transform: translateY(-2px);
+}
+body.dark-theme .btn-secondary:hover {
+  background-color: #5a9a80;
 }
 
 /* Cards de Tecnologia, Benefícios e Itens da Lista de Objetivos */
