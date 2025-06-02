@@ -197,3 +197,25 @@ p {
 .theme-icon[data-color="contrast"] {
   background-color: #ffdd00;
 }
+
+/* --- Seção Hero --- */
+.hero-section {
+  background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.8)),
+    url("https://via.placeholder.com/1920x1080/005f73/FFFFFF?text=Background+Enchente+Abstrato")
+      no-repeat center center/cover;
+  color: var(--cor-texto-claro);
+  padding: 3rem 0;
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  max-width: 800px;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
