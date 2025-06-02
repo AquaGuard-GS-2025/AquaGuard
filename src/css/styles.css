@@ -370,3 +370,71 @@ p {
   border-top: 1px solid var(--cor-secundaria-azul);
   opacity: 0.8;
 }
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .grid-2-cols .image-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid-2-cols .text-content {
+    order: 1;
+  }
+  .grid-2-cols.reverse .text-content {
+    order: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .main-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-fundo-claro);
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+  }
+  .main-nav .nav-list.active {
+    display: flex;
+  }
+  .main-nav .nav-link {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .main-nav .nav-link.active::after,
+  .main-nav .nav-link:hover::after {
+    /* O hover do ::after também é movido para animations.css */
+    width: 0;
+  }
+  .main-nav .theme-icons {
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero-section {
+    min-height: 50vh;
+    padding: 2rem 0;
+  }
+}
