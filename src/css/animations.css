@@ -26,3 +26,16 @@
   background-color: var(--cor-realce-amarelo);
   transform: translateY(-2px);
 }
+
+/* Cards de Tecnologia, Benefícios e Itens da Lista de Objetivos */
+.tech-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, border-top-color 0.3s ease,
+    border-left-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card Hover - Tema Claro (Padrão) */
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
