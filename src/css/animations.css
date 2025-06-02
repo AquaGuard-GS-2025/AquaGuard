@@ -1,0 +1,19 @@
+/* Navegação Principal */
+.main-nav .nav-link {
+  transition: color 0.3s ease;
+}
+.main-nav .nav-link::after {
+  transition: width 0.3s ease;
+}
+.main-nav .nav-link:hover {
+  color: var(--cor-destaque-laranja);
+}
+.main-nav .nav-link:hover::after,
+.main-nav .nav-link.active::after {
+  width: 70%;
+}
+@media (min-width: 769px) {
+  .main-nav .nav-link:hover::after {
+    width: 70%;
+  }
+}
