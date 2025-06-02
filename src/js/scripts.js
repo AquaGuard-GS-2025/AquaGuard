@@ -10,4 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.setAttribute("aria-expanded", isExpanded);
     });
   }
+
+  // --- Troca de Tema ---
+  const themeIcons = document.querySelectorAll(".theme-icon");
+  themeIcons.forEach((icon) => {
+    icon.addEventListener("click", function () {
+      const theme = this.dataset.color;
+      document.body.classList.remove("dark-theme", "contrast-theme");
+      if (theme === "dark") {
+        document.body.classList.add("dark-theme");
+      } else if (theme === "contrast") {
+        document.body.classList.add("contrast-theme");
+      }
+    });
+  });
 });
