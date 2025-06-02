@@ -308,3 +308,7 @@ p {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
   margin-bottom: 0.5rem;
 }
+
+.benefits-grid .benefit-card {
+  border-top: 4px solid var(--cor-secundaria-azul);
+}
