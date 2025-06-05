@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaGuard - Quiz Sobre Enchentes</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/darkTheme.css" />
+    <link rel="stylesheet" href="../css/altoContrasteTheme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="../../index.html" class="logo-link">
+          <img src="../assets/logo.png" alt="Logo da AquaGuard" class="logo" />
+          <span class="logo-text">AquaGuard</span>
+        </a>
+        <nav class="main-nav">
+          <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-list">
+            <li>
+              <a href="../../index.html#problema" class="nav-link"
+                >O Problema</a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#tecnologias" class="nav-link"
+                >Tecnologias</a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#objetivos" class="nav-link"
+                >Objetivos</a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#publico" class="nav-link"
+                >Público-Alvo</a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#beneficios" class="nav-link"
+                >Benefícios</a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#diaadia" class="nav-link"
+                >Ajuda no Dia a Dia</a
+              >
+            </li>
+            <li class="theme-icons">
+              <button
+                class="theme-icon"
+                data-color="default"
+                aria-label="Tema Padrão"
+              ></button>
+              <button
+                class="theme-icon"
+                data-color="dark"
+                aria-label="Tema Escuro"
+              ></button>
+              <button
+                class="theme-icon"
+                data-color="contrast"
+                aria-label="Alto Contraste"
+              ></button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="quiz-page-content">
+      <section id="quiz-main-section" class="content-section">
+        <div class="container">
+          <h2 class="section-title">
+            Quiz Interativo: Preparação para Enchentes
+          </h2>
+
+          <div id="quiz-area">
+            <div class="quiz-question-block">
+              <p class="quiz-question-text">
+                1. Qual destes itens NÃO é essencial em um kit de emergência
+                para enchentes?
+              </p>
+              <div class="quiz-options">
+                <label>
+                  <input type="radio" name="q1" value="a" /> Água potável
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q1" value="b" /> Aparelho de
+                  videogame portátil
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q1" value="c" /> Lanterna e pilhas
+                  extras
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q1" value="d" /> Kit de primeiros
+                  socorros
+                </label>
+                <br />
+              </div>
+            </div>
+
+            <div class="quiz-question-block">
+              <p class="quiz-question-text">
+                2. Ao receber um alerta de evacuação por enchente, qual a
+                primeira ação a tomar?
+              </p>
+              <div class="quiz-options">
+                <label>
+                  <input type="radio" name="q2" value="a" /> Esperar para ver se
+                  a água realmente sobe.
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q2" value="b" /> Desligar a
+                  eletricidade, água e gás (se seguro) e evacuar para local
+                  seguro.
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q2" value="c" /> Ligar para amigos
+                  para avisar.
+                </label>
+                <br />
+                <label>
+                  <input type="radio" name="q2" value="d" /> Tentar salvar o
+                  máximo de objetos de valor.
+                </label>
+                <br />
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  3. Durante uma enchente, qual das seguintes ações deve ser
+                  EVITADA?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q3" value="a" /> Atravessar áreas
+                    alagadas a pé ou de carro.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q3" value="b" /> Manter-se
+                    informado através de fontes oficiais.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q3" value="c" /> Ajudar vizinhos,
+                    se for seguro fazê-lo.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q3" value="d" /> Ter um kit de
+                    emergência preparado.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  4. Qual destes é um sinal de que uma enchente pode estar se
+                  aproximando da sua área?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q4" value="a" /> Céu completamente
+                    limpo e sem nuvens.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q4" value="b" /> Aumento rápido e
+                    contínuo do nível de rios e córregos próximos.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q4" value="c" /> Diminuição da
+                    umidade do ar.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q4" value="d" /> Pássaros cantando
+                    mais alto que o normal.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  5. Após uma enchente, ao retornar para casa, qual cuidado é
+                  primordial?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q5" value="a" /> Ligar
+                    imediatamente todos os aparelhos eletrônicos para testá-los.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q5" value="b" /> Consumir
+                    alimentos que tiveram contato com a água da enchente. </label
+                  ><br />
+                  <label>
+                    <input type="radio" name="q5" value="c" /> Verificar a
+                    estrutura da casa e riscos elétricos antes de entrar ou
+                    religar a energia.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q5" value="d" /> Ignorar pequenos
+                    ferimentos, pois há coisas mais importantes.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  6. Qual ação humana pode contribuir para o agravamento de
+                  enchentes em áreas urbanas?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q6" value="a" /> Plantio de
+                    árvores em encostas.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q6" value="b" /> Limpeza regular
+                    de canais de drenagem.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q6" value="c" /> Criação de
+                    parques e áreas permeáveis.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q6" value="d" /> Descarte
+                    irregular de lixo em rios e bueiros.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  7. Qual é uma das principais responsabilidades da Defesa Civil
+                  em situações de enchente?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q7" value="a" />Coordenar ações de
+                    prevenção, socorro, assistência e recuperação.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q7" value="b" /> Realizar o
+                    trabalho de previsão do tempo meteorológico.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q7" value="c" />
+                    Distribuir multas por construções irregulares.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q7" value="d" /> Fornecer
+                    empréstimos para reconstrução de casas.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  8. A água de enchente pode ser perigosa principalmente por
+                  quê?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q8" value="a" /> Ser
+                    excessivamente gelada.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q8" value="b" /> Conter
+                    contaminantes como esgoto, produtos químicos e bactérias.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q8" value="c" /> Ter uma cor muito
+                    escura que impede a visão.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q8" value="d" /> Ser salgada
+                    demais para consumo.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  9. Se você estiver em um veículo e for surpreendido por uma
+                  enchente, qual a melhor ação?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q9" value="a" /> Acelerar para
+                    tentar atravessar a área alagada rapidamente.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q9" value="b" /> Permanecer dentro
+                    do veículo e esperar o resgate.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q9" value="c" /> Abandonar o
+                    veículo imediatamente e procurar um local mais alto e seguro
+                    (se for possível sair em segurança).
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q9" value="d" /> Ligar o
+                    pisca-alerta e buzinar continuamente.
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="quiz-question-block">
+                <p class="quiz-question-text">
+                  10. Qual das seguintes afirmações sobre prevenção de enchentes
+                  é VERDADEIRA?
+                </p>
+                <div class="quiz-options">
+                  <label>
+                    <input type="radio" name="q10" value="a" /> Apenas áreas
+                    próximas a grandes rios correm risco de enchente.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q10" value="b" /> Construir muros
+                    altos ao redor da casa garante proteção total contra
+                    inundações.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q10" value="c" /> Conhecer as
+                    áreas de risco da sua localidade e ter um plano de evacuação
+                    familiar são medidas importantes.
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="q10" value="d" /> Enchentes são
+                    eventos puramente naturais e não podem ser influenciadas por
+                    ações humanas.
+                  </label>
+                  <br />
+                </div>
+              </div>
+            </div>
+
+            <button
+              id="submit-quiz-btn"
+              class="btn btn-primary btn-large"
+              style="margin-top: 2rem"
+            >
+              Ver Resultado
+            </button>
+          </div>
+
+          <div
+            id="quiz-result-area"
+            style="
+              display: none;
+              margin-top: 2rem;
+              padding: 1.5rem;
+              background-color: var(--cor-fundo-alternativo);
+              border-radius: 6px;
+            "
+          >
+            <h3 style="margin-bottom: 1rem">Seu Resultado:</h3>
+            <p id="quiz-score" style="font-size: 1.2em; font-weight: bold"></p>
+            <p id="quiz-feedback" style="margin-top: 0.5rem"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text-footer">AquaGuard</span>
+            <a href="../../index.html#hero">
+              <img
+                src="../assets/logo.png"
+                alt="Logo da AquaGuard no rodapé"
+                class="logo-footer"
+              />
+            </a>
+          </div>
+          <div class="footer-links">
+            <h4>Links Úteis</h4>
+            <ul>
+              <li><a href="../../index.html#problema">O Problema</a></li>
+              <li><a href="../../index.html#tecnologias">Tecnologias</a></li>
+              <li><a href="../../index.html#">Perguntas Frequentes</a></li>
+              <li><a href="../../index.html#">Seja um Voluntário</a></li>
+            </ul>
+          </div>
+          <div class="footer-contato">
+            <h4>Contato</h4>
+            <p>contato@aquaguard.com.br</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 AquaGuard Soluções Resilientes. Todos os direitos
+            reservados.
+          </p>
+          <p>
+            <a href="#">Termos de Uso</a> |
+            <a href="#">Política de Privacidade</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/quiz.js"></script>
+  </body>
+</html>

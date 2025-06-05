@@ -31,17 +31,6 @@ body.dark-theme .btn-secondary:hover {
 .main-nav .nav-link.active::after {
   width: 70%;
 }
-@media (min-width: 769px) {
-  .main-nav .nav-link:hover::after {
-    width: 70%;
-  }
-}
-/* Zerar o hover do ::after para mobile (já está no styles.css na media query, mas pode ser reforçado aqui se quiser) */
-@media (max-width: 768px) {
-  .main-nav .nav-link:hover::after {
-    width: 0;
-  }
-}
 
 /* Cards de Tecnologia, Benefícios e Itens da Lista de Objetivos */
 .tech-card,
@@ -117,15 +106,6 @@ p {
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .dot:hover {
   /* Movido do styles.css para cá */
   background-color: #717171;
@@ -165,4 +145,25 @@ body.contrast-theme .next:hover {
 .dot:hover {
   /* :hover nos dots também deve estar em animations.css */
   background-color: #717171;
+}
+
+@media (min-width: 1279px) {
+  .main-nav .nav-link:hover::after {
+    width: 70%;
+  }
+}
+/* Zerar o hover do ::after para mobile */
+@media (max-width: 1279px) {
+  .main-nav .nav-link:hover::after {
+    width: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

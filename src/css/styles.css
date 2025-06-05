@@ -459,7 +459,7 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   h1 {
     font-size: 2.2rem;
   }
@@ -519,4 +519,69 @@ p {
     flex-basis: 100%;
     min-width: unset;
   }
+}
+
+/* --- Estilos para a Página do Quiz --- */
+.quiz-page-content {
+  padding-top: 2rem; /* Adiciona um espaço no topo da área principal do quiz */
+  padding-bottom: 2rem; /* Adiciona um espaço na base da área principal do quiz */
+}
+
+#quiz-area {
+  background-color: var(
+    --cor-fundo-claro
+  ); /* Pode ser --cor-fundo-alternativo se preferir */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.quiz-question-block {
+  margin-bottom: 2.5rem; /* Espaço entre cada bloco de pergunta */
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.quiz-question-block:last-of-type {
+  border-bottom: none; /* Remove a borda do último bloco de pergunta */
+}
+
+.quiz-question-text {
+  font-size: 1.2em; /* Tamanho da fonte da pergunta */
+  font-weight: 600; /* Deixa a pergunta em negrito */
+  color: var(--cor-primaria-azul); /* Cor da pergunta */
+  margin-bottom: 1rem; /* Espaço abaixo do texto da pergunta */
+}
+
+.quiz-options label {
+  display: block; /* Faz cada opção ocupar uma linha */
+  margin-bottom: 0.75rem; /* Espaço entre as opções */
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.quiz-options label:hover {
+  background-color: var(
+    --cor-fundo-alternativo
+  ); /* Um leve destaque no hover */
+}
+
+.quiz-options input[type="radio"] {
+  margin-right: 0.5rem; /* Espaço entre o radio button e o texto da opção */
+  transform: scale(1.2); /* Aumenta um pouco o tamanho do radio button */
+}
+
+#submit-quiz-btn {
+  display: block; /* Faz o botão ocupar a largura disponível (ou ajuste com margin auto) */
+  margin: 2rem auto 0 auto; /* Centraliza o botão e adiciona margem no topo */
+}
+
+#quiz-result-area h3 {
+  color: var(--cor-secundaria-azul); /* Cor para o título do resultado */
+}
+
+#quiz-result-area p {
+  color: var(--cor-texto-escuro); /* Cor para o texto do resultado */
 }

@@ -1,173 +1,245 @@
-:root {
-  --cor-primaria-azul-escuro: #112959;
-  --cor-secundaria-azul-medio: #23518c;
-  --cor-acao-primaria: #fca311;
-  --cor-acao-secundaria: #ee9b00;
-  --cor-destaque-contraste: #94d2bd;
+/* src/css/altoContrasteTheme.css */
 
-  --cor-fundo-principal: #000000;
-  --cor-fundo-secundario: #151515;
-  --cor-texto-principal: #ffffff;
-  --cor-texto-secundario: #7f7f7f;
+body.contrast-theme {
+  --ct-fundo-principal: #000000;
+  --ct-fundo-secundario: #1a1a1a;
+  --ct-texto-principal: #ffffff;
+  --ct-texto-secundario: #dcdcdc;
 
-  --cor-status-sucesso: #4caf50;
-  --cor-status-alerta: #ffc107;
-  --cor-status-erro: #d32f2f;
-  --cor-divisor: #424242;
+  --ct-acao-primaria: #ffff00;
+  --ct-acao-secundaria: #00ffff;
+  --ct-destaque-geral: var(--ct-acao-primaria);
+
+  --ct-status-sucesso: #39ff14;
+  --ct-status-alerta: #ffff00;
+  --ct-status-erro: #ff1f1f;
+  --ct-divisor: #666666;
+
+  /* 2. Sobrescrevendo as variáveis globais do styles.css para usar as cores de alto contraste */
+  --cor-primaria-azul: var(--ct-texto-principal);
+  --cor-secundaria-azul: var(--ct-acao-secundaria);
+  --cor-destaque-verde: var(--ct-acao-secundaria);
+  --cor-destaque-laranja: var(--ct-acao-primaria);
+  --cor-realce-amarelo: var(--ct-acao-primaria);
+
+  --cor-texto-escuro: var(--ct-texto-principal);
+  --cor-texto-claro: var(--ct-fundo-principal);
+  --cor-texto-secundario: var(--ct-texto-secundario);
+
+  --cor-fundo-claro: var(--ct-fundo-principal);
+  --cor-fundo-alternativo: var(--ct-fundo-secundario);
+  --cor-borda: var(--ct-divisor);
+
+  --box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15);
 }
+
+/* 3. Estilos específicos para elementos no tema de alto contraste */
 
 body.contrast-theme .site-header,
 body.contrast-theme .main-nav .nav-list.active {
-  background-color: var(--cor-fundo-secundario);
+  background-color: var(--ct-fundo-secundario);
   box-shadow: var(--box-shadow);
+  border-bottom: 1px solid var(--ct-divisor);
 }
 
 body.contrast-theme .tech-card,
 body.contrast-theme .benefit-card,
 body.contrast-theme .slideshow-container,
-body.contrast-theme .quiz-container {
-  background-color: var(--cor-fundo-secundario);
+body.contrast-theme #quiz-area {
+  /* Estilo para a área geral do quiz */
+  background-color: var(--ct-fundo-secundario);
   box-shadow: var(--box-shadow);
-  border-top-color: var(--cor-divisor);
+  border: 1px solid var(--ct-divisor); /* Borda para os cards */
 }
 
 body.contrast-theme .benefits-grid .benefit-card {
-  border-top: 4px solid var(--cor-secundaria-azul-medio);
+  border-top: 4px solid var(--ct-acao-secundaria);
 }
 
 body.contrast-theme .tech-grid .tech-card {
-  border-top: 4px solid var(--cor-acao-secundaria);
+  border-top: 4px solid var(--ct-acao-primaria);
 }
 
 body.contrast-theme .flex-layout-list > li,
 body.contrast-theme .objective-list li {
-  background-color: var(--cor-fundo-secundario);
-  color: var(--cor-texto-principal);
-  border-left-color: var(--cor-destaque-contraste);
+  background-color: var(--ct-fundo-secundario);
+  color: var(--ct-texto-principal);
+  border-left-color: var(--ct-acao-secundaria);
   box-shadow: var(--box-shadow);
 }
 
 body.contrast-theme .logo-text {
-  color: var(--cor-texto-principal);
+  color: var(--ct-texto-principal);
 }
 
 body.contrast-theme .main-nav .nav-link {
-  color: var(--cor-texto-secundario);
+  color: var(
+    --ct-texto-principal
+  ); /* Links da navegação principais em branco */
 }
-
-body.contrast-theme .menu-toggle {
-  color: var(--cor-texto-principal);
-}
-
+body.contrast-theme .main-nav .nav-link:hover,
 body.contrast-theme .main-nav .nav-link.active {
-  color: var(--cor-acao-primaria);
+  color: var(--ct-acao-primaria);
+  background-color: transparent; /* Garante que não haja fundo no hover do link em si */
 }
 
 body.contrast-theme .main-nav .nav-link::after {
-  background-color: var(--cor-acao-primaria);
+  background-color: var(--ct-acao-primaria);
+}
+
+body.contrast-theme .menu-toggle {
+  color: var(--ct-texto-principal);
 }
 
 body.contrast-theme h1 {
-  color: var(--cor-texto-principal);
+  color: var(--ct-texto-principal);
 }
-
 body.contrast-theme h2 {
-  color: var(--cor-acao-primaria);
+  color: var(--ct-acao-primaria);
 }
-
 body.contrast-theme h3 {
-  color: var(--cor-texto-principal);
+  color: var(--ct-texto-principal);
 }
-
 body.contrast-theme p {
-  color: var(--cor-texto-secundario);
+  color: var(--ct-texto-secundario);
 }
-
 body.contrast-theme .hero-section p {
-  color: var(--cor-texto-principal);
-  opacity: 0.85;
+  color: var(--ct-texto-principal);
+  opacity: 0.9;
+}
+body.contrast-theme strong {
+  color: var(--ct-texto-principal);
+  font-weight: bold;
 }
 
 body.contrast-theme .section-title::after {
-  background-color: var(--cor-acao-primaria);
+  background-color: var(--ct-acao-primaria);
 }
-
 body.contrast-theme .alt-bg .section-title::after {
-  background-color: var(--cor-destaque-contraste);
+  background-color: var(--ct-acao-secundaria);
 }
 
+/* Botões */
 body.contrast-theme .btn {
-  color: var(--cor-fundo-principal);
+  color: var(--ct-fundo-principal);
+  border: 1px solid var(--ct-texto-principal);
 }
-
 body.contrast-theme .btn-primary {
-  background-color: var(--cor-acao-primaria);
+  background-color: var(--ct-acao-primaria);
 }
-
 body.contrast-theme .btn-secondary {
-  background-color: var(--cor-acao-secundaria);
+  background-color: var(--ct-acao-secundaria);
+}
+body.contrast-theme .btn:hover {
+  filter: brightness(1.2);
 }
 
+/* Rodapé */
 body.contrast-theme .site-footer {
-  background-color: var(--cor-fundo-secundario);
-  border-top-color: var(--cor-divisor);
-  color: var(--cor-texto-secundario);
+  background-color: var(--ct-fundo-secundario);
+  border-top-color: var(--ct-divisor);
+  color: var(--ct-texto-secundario);
 }
-
 body.contrast-theme .footer-logo .logo-text-footer {
-  color: var(--cor-texto-principal);
+  color: var(--ct-texto-principal);
 }
-
 body.contrast-theme .footer-links h4,
 body.contrast-theme .footer-contato h4 {
-  color: var(--cor-destaque-contraste);
+  color: var(--ct-acao-secundaria);
 }
-
 body.contrast-theme .footer-bottom {
-  color: var(--cor-texto-secundario);
+  color: var(--ct-texto-secundario);
 }
-
 body.contrast-theme .footer-links ul li a,
 body.contrast-theme .footer-bottom a {
-  color: var(--cor-texto-secundario);
+  color: var(--ct-texto-secundario);
 }
-
 body.contrast-theme .footer-links ul li a:hover,
 body.contrast-theme .footer-bottom a:hover {
-  color: var(--cor-acao-primaria);
+  color: var(--ct-acao-primaria);
+  text-decoration: underline;
+}
+
+/* Ícones de Tema */
+body.contrast-theme .theme-icon {
+  border: 1px solid var(--ct-texto-principal);
 }
 
 /* Slideshow no Alto Contraste Theme */
 body.contrast-theme .slideshow-container {
-  background-color: var(--cor-fundo-secundario);
+  background-color: var(--ct-fundo-secundario);
   box-shadow: var(--box-shadow);
-  border: 2px solid var(--cor-acao-primaria);
+  border: 2px solid var(--ct-acao-primaria);
 }
-
+body.contrast-theme .slide img {
+  border: 1px solid var(--ct-divisor);
+}
 body.contrast-theme .prev,
 body.contrast-theme .next {
-  color: var(--cor-texto-principal);
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Fundo escuro para contraste com texto branco */
+  color: var(--ct-texto-principal);
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
 body.contrast-theme .prev:hover,
 body.contrast-theme .next:hover {
-  color: var(--cor-fundo-principal); /* Texto preto */
-  background-color: var(--cor-acao-primaria); /* Fundo laranja */
+  color: var(--ct-fundo-principal);
+  background-color: var(--ct-acao-primaria);
 }
-
 body.contrast-theme .dot {
-  background-color: var(--cor-texto-secundario);
-  border: 1px solid var(--cor-texto-principal); /* Borda para visibilidade */
+  background-color: var(--ct-texto-secundario);
+  border: 1px solid var(--ct-texto-principal);
+}
+body.contrast-theme .dot.active,
+body.contrast-theme .dot:hover {
+  background-color: var(--ct-acao-primaria);
+  border-color: var(--ct-texto-principal);
 }
 
-body.contrast-theme .dot.active, /* Corrigido: .dot.active */
-body.contrast-theme .dot:hover {
-  background-color: var(--cor-acao-primaria);
-  border-color: var(--cor-fundo-principal);
+/* Estilos para o Quiz no Tema Alto Contraste */
+body.contrast-theme #quiz-area {
+  background-color: var(--ct-fundo-principal);
+  border: 1px solid var(--ct-divisor);
+}
+body.contrast-theme .quiz-question-text {
+  color: var(--ct-texto-principal);
+}
+body.contrast-theme .quiz-options label {
+  color: var(--ct-texto-principal);
+  border: 1px dashed transparent;
+  padding: 0.5rem;
+}
+body.contrast-theme .quiz-options label:hover {
+  background-color: var(--ct-fundo-secundario);
+  border-color: var(--ct-acao-primaria);
+  color: var(--ct-acao-primaria);
+}
+body.contrast-theme .quiz-options input[type="radio"] {
+  filter: invert(1) hue-rotate(180deg) brightness(1.5); /* Tenta inverter cores do radio button para visibilidade */
+  margin-right: 0.75rem;
+}
+
+/* Área de Resultado do Quiz no Tema de Alto Contraste */
+body.contrast-theme #quiz-result-area {
+  background-color: var(--ct-fundo-principal);
+  border: 2px solid var(--ct-acao-primaria);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 0;
+  color: var(--ct-texto-principal);
+}
+body.contrast-theme #quiz-result-area h3 {
+  color: var(--ct-acao-primaria);
+  margin-bottom: 1rem;
+  font-size: 1.4em;
+  border-bottom: 1px solid var(--ct-divisor);
+  padding-bottom: 0.5rem;
+}
+body.contrast-theme #quiz-result-area p {
+  color: var(--ct-texto-principal);
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+body.contrast-theme #quiz-result-area p#quiz-score {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.75rem;
 }

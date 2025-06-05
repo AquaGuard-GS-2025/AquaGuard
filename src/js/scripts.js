@@ -11,35 +11,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // --- Aplicar Tema Salvo ao Carregar a Página ---
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme) {
+    // Remove temas que possam estar no body por padrão ou de um carregamento anterior sem JS
+    document.body.classList.remove("dark-theme", "contrast-theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-theme");
+    } else if (savedTheme === "contrast") {
+      document.body.classList.add("contrast-theme");
+    }
+  }
+
   // --- Troca de Tema ---
   const themeIcons = document.querySelectorAll(".theme-icon");
   themeIcons.forEach((icon) => {
     icon.addEventListener("click", function () {
       const theme = this.dataset.color;
-      document.body.classList.remove("dark-theme", "contrast-theme");
+
+      document.body.classList.remove("dark-theme", "contrast-theme"); // Remove temas anteriores
+
       if (theme === "dark") {
         document.body.classList.add("dark-theme");
+        localStorage.setItem("selectedTheme", "dark"); // Salva a escolha
       } else if (theme === "contrast") {
         document.body.classList.add("contrast-theme");
+        localStorage.setItem("selectedTheme", "contrast"); // Salva a escolha
+      } else {
+        // Se o tema for 'default' ou qualquer outro valor não reconhecido,
+        // consideramos como tema padrão
+        localStorage.setItem("selectedTheme", "default"); // Salva a escolha 'default'
       }
     });
   });
 
   // --- Slideshow ---
   let slideIndex = 1;
-  // Chama showSlides APENAS se os elementos existirem.
-  // É mais seguro chamar dentro de uma verificação ou após garantir que o HTML do slideshow está no DOM.
-  // A função showSlides já tem uma verificação interna, o que é bom.
   showSlides(slideIndex);
 
   // Funções globais para os botões onclick no HTML
   window.plusSlides = function (n) {
-    // Expor ao escopo global
     showSlides((slideIndex += n));
   };
 
   window.currentSlide = function (n) {
-    // Expor ao escopo global
     showSlides((slideIndex = n));
   };
 
