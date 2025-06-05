@@ -1,3 +1,22 @@
+/* Botões */
+.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--cor-realce-amarelo);
+  transform: translateY(-2px);
+}
+body.dark-theme .btn-primary:hover {
+  background-color: var(--cor-realce-amarelo);
+}
+.btn-secondary:hover {
+  background-color: #7ab8a5;
+  transform: translateY(-2px);
+}
+body.dark-theme .btn-secondary:hover {
+  background-color: #5a9a80;
+}
+
 /* Navegação Principal */
 .main-nav .nav-link {
   transition: color 0.3s ease;
@@ -17,38 +36,40 @@
     width: 70%;
   }
 }
-
-/* Botões */
-.btn {
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-}
-.btn-primary:hover {
-  background-color: var(--cor-realce-amarelo);
-  transform: translateY(-2px);
-}
-.btn-secondary:hover {
-  background-color: #7ab8a5;
-  transform: translateY(-2px);
+/* Zerar o hover do ::after para mobile (já está no styles.css na media query, mas pode ser reforçado aqui se quiser) */
+@media (max-width: 768px) {
+  .main-nav .nav-link:hover::after {
+    width: 0;
+  }
 }
 
 /* Cards de Tecnologia, Benefícios e Itens da Lista de Objetivos */
 .tech-card,
-.objective-list li,
 .benefit-card,
-.flex-layout-list > li {
+.flex-layout-list > li, /* Supondo que .flex-layout-list é a classe do <ul> */
+.objective-list li {
+  /* Ou .objective-list > li se .objective-list é o <ul> */
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease, border-top-color 0.3s ease,
     border-left-color 0.3s ease, color 0.3s ease;
 }
 
-/* Card Hover - Tema Claro (Padrão) */
 .tech-card:hover,
-.objective-list li:hover,
 .benefit-card:hover,
-.flex-layout-list > li:hover {
+.flex-layout-list > li:hover,
+.objective-list li:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
+
+body.dark-theme .tech-card:hover,
+body.dark-theme .benefit-card:hover,
+body.dark-theme .flex-layout-list > li:hover,
+body.dark-theme .objective-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
 /* Links do Rodapé */
 .footer-links ul li a,
 .footer-bottom a {
@@ -57,4 +78,91 @@
 .footer-links ul li a:hover,
 .footer-bottom a:hover {
   color: var(--cor-destaque-laranja);
+}
+
+/* Transição Geral para troca de tema */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Transições para elementos específicos na troca de tema */
+.site-header,
+.main-nav .nav-list.active,
+.slideshow-container, /* Adicionado slideshow aqui */
+.quiz-container {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-text,
+.menu-toggle,
+h1,
+h2,
+h3,
+p {
+  transition: color 0.3s ease;
+}
+
+.site-footer {
+  transition: background-color 0.3s ease, border-top-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-icon {
+  transition: border-color 0.3s ease;
+}
+
+/* Slideshow fade e dot hover */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dot:hover {
+  /* Movido do styles.css para cá */
+  background-color: #717171;
+}
+body.dark-theme .dot:hover {
+  /* Específico para dark theme */
+  background-color: var(--cor-destaque-laranja); /* Ou outra cor que combine */
+}
+body.contrast-theme .dot:hover {
+  /* Específico para contrast theme */
+  background-color: var(--cor-acao-primaria);
+  border-color: var(--cor-fundo-principal);
+}
+
+/* Botões de navegação do slideshow */
+.prev,
+.next {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--cor-texto-claro); /* Para tema claro */
+}
+body.dark-theme .prev:hover,
+body.dark-theme .next:hover {
+  color: var(--cor-texto-claro);
+  background-color: rgba(200, 200, 200, 0.5);
+}
+body.contrast-theme .prev:hover,
+body.contrast-theme .next:hover {
+  color: var(--cor-fundo-principal);
+  background-color: var(--cor-acao-primaria);
+}
+
+.active,
+.dot:hover {
+  /* :hover nos dots também deve estar em animations.css */
+  background-color: #717171;
 }

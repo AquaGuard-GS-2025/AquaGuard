@@ -121,3 +121,32 @@ body.dark-theme .footer-links ul li a:hover,
 body.dark-theme .footer-bottom a:hover {
   color: var(--cor-destaque-laranja);
 }
+
+/* Slideshow no Dark Theme */
+body.dark-theme .slideshow-container {
+  background-color: var(--cor-fundo-alternativo);
+  box-shadow: var(--box-shadow);
+}
+
+body.dark-theme .prev,
+body.dark-theme .next {
+  color: var(--cor-texto-escuro);
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+body.dark-theme .prev:hover,
+body.dark-theme .next:hover {
+  color: var(
+    --cor-texto-claro
+  ); /* Ou --cor-texto-escuro se o fundo do hover for claro */
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+body.dark-theme .dot {
+  background-color: #555;
+}
+
+body.dark-theme .dot.active, /* Corrigido: .dot.active para mais especificidade */
+body.dark-theme .dot:hover {
+  background-color: var(--cor-destaque-laranja);
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AquaGuard - Soluções Resilientes Contra Enchentes</title>
     <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="icon" href="src/assets/logo.png" type="png" />
+    <link rel="icon" href="./src/assets/logo.png" type="image/png" />
     <link rel="stylesheet" href="./src/css/styles.css" />
     <link rel="stylesheet" href="./src/css/animations.css" />
     <link rel="stylesheet" href="./src/css/darkTheme.css" />
@@ -78,12 +78,13 @@
           >
         </div>
       </section>
+
       <section id="problema" class="content-section">
         <div class="container">
           <h2 class="section-title">
             1. O Problema Que Nossa Solução Irá Resolver
           </h2>
-          <div class="grid-2-cols">
+          <div class="flex-layout-2-cols">
             <div class="text-content">
               <p>
                 As enchentes recorrentes no Brasil representam um grave desafio,
@@ -100,18 +101,18 @@
             <div class="image-content">
               <img
                 src="./src/assets/image.png"
-                alt="Imagem ilustrando o impacto das enchentes"
+                alt="Imagem ilustrando o impacto das
+              enchentes"
                 class="section-image"
               />
             </div>
           </div>
         </div>
       </section>
-
       <section id="tecnologias" class="content-section alt-bg">
         <div class="container">
           <h2 class="section-title">2. As Tecnologias Que Serão Utilizadas</h2>
-          <div class="grid-3-cols tech-grid">
+          <div class="flex-layout-3-cols tech-grid">
             <div class="tech-card">
               <h3 class="tech-title">Inteligência Artificial</h3>
               <p>
@@ -134,15 +135,44 @@
               </p>
             </div>
           </div>
+
+          <div id="slideshow-container" class="slideshow-container">
+            <div class="slide fade">
+              <img
+                src="./src/assets/inteligencia-artificial.png"
+                alt="Imagem representativa de Inteligência Artificial"
+              />
+            </div>
+            <div class="slide fade">
+              <img
+                src="./src/assets/satelite.jpg"
+                alt="Ilustração da Tecnologia 2"
+              />
+            </div>
+            <div class="slide fade">
+              <img
+                src="./src/assets/bigData.jpg"
+                alt="Ilustração da Tecnologia 3"
+              />
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+          <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
       </section>
-
       <section id="objetivos" class="content-section">
         <div class="container">
           <h2 class="section-title">
             3. Os Objetivos Que Pretendemos Alcançar
           </h2>
-          <ul class="grid-list objective-list">
+          <ul class="flex-layout-list objective-list">
             <li>
               Minimizar perdas humanas e materiais através de alertas
               antecipados e eficazes.
@@ -165,11 +195,11 @@
       <section id="publico" class="content-section alt-bg">
         <div class="container">
           <h2 class="section-title">4. O Público-Alvo Que Será Impactado</h2>
-          <div class="grid-2-cols">
             <div class="image-content">
               <img
                 src="./src/assets/criancaTriste.jpg"
-                alt="Imagem representando os diversos usuários da plataforma"
+                alt="Imagem representando os diversos
+              usuários da plataforma"
                 class="section-image"
               />
             </div>
@@ -198,7 +228,7 @@
           <h2 class="section-title">
             5. Os Benefícios Oferecidos Pela Solução
           </h2>
-          <div class="grid-3-cols benefits-grid">
+          <div class="flex-layout-3-cols benefits-grid">
             <div class="benefit-card">
               <h3 class="benefit-title">Prevenção Aprimorada</h3>
               <p>
@@ -243,7 +273,7 @@
               organizada.
             </p>
           </div>
-          <div id="quiz-container" class="quiz-container">
+          <div id="quiz-placeholder" class="quiz-container">
             <a href="#quiz" class="btn btn-secondary"
               >Teste Seus Conhecimentos sobre Enchentes (Quiz)</a
             >
@@ -251,6 +281,7 @@
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-content">
@@ -259,7 +290,7 @@
             <a href="#hero">
               <img
                 src="./src/assets/logo.png"
-                alt="Logo da AquaGuard"
+                alt="Logo da AquaGuard no rodapé"
                 class="logo-footer"
               />
             </a>
